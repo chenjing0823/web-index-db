@@ -6,6 +6,7 @@
  * @Description: 
 -->
 # web-index-db
+一个web的indexDb调试代码，拉取可以直接使用，在控制台中查看结果。
 
 ## Project setup
 ```
