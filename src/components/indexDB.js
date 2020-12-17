@@ -1,15 +1,15 @@
 class IndexDBDemo {
   db = null
 
-  constructor(name, storeOpt = {}, key = null, indexOpt = {}) {
+  constructor(name, storeOptions = {}, key = null, indexOptions = {}) {
     if (!this.db) {
-      this.init(name, storeOpt, key, indexOpt)
+      this.init(name, storeOptions, key, indexOptions)
     }
     return this.db
   }
 
 	// 初始化
-  init (name, storeOpt = {}, key = null, indexOpt = {}) {
+  init (name, storeOptions = {}, key = null, indexOptions = {}) {
     console.log('init')
     const request = indexedDB.open(name)
 
@@ -21,9 +21,9 @@ class IndexDBDemo {
       request.onupgradeneeded = function ({ target: { result } }) {
         this.db = result
         if (!this.db.objectStoreNames.contains(name)) {
-          const req = this.db.createObjectStore(name, storeOpt)
+          const req = this.db.createObjectStore(name, storeOptions)
           if (key) {
-            req.createIndex(key, key, indexOpt)
+            req.createIndex(key, key, indexOptions)
           }
         }
         res()
