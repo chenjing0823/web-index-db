@@ -1,3 +1,10 @@
+<!--
+ * @Author: jing.chen
+ * @Date: 2020-12-17 13:51:28
+ * @LastEditors: jing.chen
+ * @LastEditTime: 2020-12-17 13:55:32
+ * @Description: 
+-->
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
@@ -6,7 +13,7 @@
 </template>
 
 <script>
-import indexDb from './components/indexDb'
+import indexDb from './components/indexDb.vue'
 
 export default {
   name: 'App',
